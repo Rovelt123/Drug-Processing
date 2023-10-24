@@ -1,0 +1,449 @@
+
+.recipe-box {
+    width: 70%; 
+    max-width: 250px; 
+    top: 600px;
+    right: -800px;
+    background-color: rgba(29, 32, 73, 0.87); 
+    padding: 10px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 10px; 
+    text-align: center; 
+    border: 2px solid rgba(4, 4, 10, 0.87);
+}
+
+#container {
+	position: absolute;
+	height: auto;
+	top: 15%;
+	right: 20%;
+	border-radius: 5px;
+}
+
+
+#box {
+	max-height: 80vh;
+	width: 200%;
+	overflow-x: none;
+	overflow-y: auto;
+	padding: 10px;
+}
+
+
+.patience-label {
+    color: #ffffff; 
+}
+
+.degrees-container {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.degrees-container label {
+    margin-right: 10px;
+    width: 100px; 
+}
+
+
+.recipe-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; 
+    margin-bottom: 10px;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FF0000; 
+}
+
+
+.start-button {
+    background-color: #008000; 
+    color: #FFFFFF;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: -60px;
+}
+
+.confirm-box {
+    color: #ffffff;
+    width: 70%;
+    max-width: 250px; 
+    background-color: rgba(29, 32, 73, 0.87);
+    padding: 5px;
+    position: relative;
+    margin: 0 auto; 
+    border-radius: 10px; 
+    text-align: center; 
+    border: 2px solid rgba(4, 4, 10, 0.87); 
+    font-size: 12px;
+    top: 600px;
+    right: -800px;
+}
+
+
+.confirm-button {
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+.ingredientInputs input {
+    width: auto;
+    padding: 5px;
+    border: 1px solid #000;
+    font-size: 14px;
+}
+
+.degrees input {
+    width: auto;
+    padding: 5px;
+    border: 1px solid #000;
+    font-size: 14px;
+}
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .buttons {
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 30px;
+  }
+  
+  .start-button {
+    z-index: 1;
+    position: relative;
+    top: 20px;
+    padding: 10px 16px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #008000;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: color 0.2s;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  .start-button:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+  .start-button:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s 0.2s;
+    border-radius: 30px;
+  }
+  .start-button:hover {
+    color: #FFFFFF;
+    border-radius: 30px;
+  }
+  .start-button:hover:after {
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+  }
+  .start-button__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #ffffff;
+  }
+  .start-button__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url("#goo");
+  }
+  .start-button__blob {
+    position: absolute;
+    top: 2px;
+    width: 25%;
+    height: 100%;
+    background: #008000;
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    transition: transform 0.45s;
+  }
+  @supports (filter: url("#goo")) {
+    .start-button__blob {
+      transform: translate3d(0, 150%, 0) scale(1.4);
+    }
+  }
+  .start-button__blob:nth-child(1) {
+    left: 0%;
+    transition-delay: 0s;
+  }
+  .start-button__blob:nth-child(2) {
+    left: 30%;
+    transition-delay: 0.08s;
+  }
+  .start-button__blob:nth-child(3) {
+    left: 60%;
+    transition-delay: 0.16s;
+  }
+  .start-button__blob:nth-child(4) {
+    left: 90%;
+    transition-delay: 0.24s;
+  }
+  .start-button:hover .start-button__blob {
+    transform: translateZ(0) scale(1.7);
+  }
+  @supports (filter: url("#goo")) {
+    .start-button:hover .start-button__blob {
+      transform: translateZ(0) scale(1.4);
+    }
+  }
+
+
+  
+  .yes-button {
+    z-index: 1;
+    position: relative;
+    top: 20px;
+    padding: 10px 16px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #008000;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: color 0.2s;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  .yes-button:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+  .yes-button:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s 0.2s;
+    border-radius: 30px;
+  }
+  .yes-button:hover {
+    color: #FFFFFF;
+    border-radius: 30px;
+  }
+  .yes-button:hover:after {
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+  }
+  .yes-button__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #ffffff;
+  }
+  .yes-button__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url("#goo");
+  }
+  .yes-button__blob {
+    position: absolute;
+    top: 2px;
+    width: 25%;
+    height: 100%;
+    background: #008000;
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    transition: transform 0.45s;
+  }
+  @supports (filter: url("#goo")) {
+    .yes-button__blob {
+      transform: translate3d(0, 150%, 0) scale(1.4);
+    }
+  }
+  .yes-button__blob:nth-child(1) {
+    left: 0%;
+    transition-delay: 0s;
+  }
+  .yes-button__blob:nth-child(2) {
+    left: 30%;
+    transition-delay: 0.08s;
+  }
+  .yes-button__blob:nth-child(3) {
+    left: 60%;
+    transition-delay: 0.16s;
+  }
+  .yes-button__blob:nth-child(4) {
+    left: 90%;
+    transition-delay: 0.24s;
+  }
+  .yes-button:hover .yes-button__blob {
+    transform: translateZ(0) scale(1.7);
+  }
+  @supports (filter: url("#goo")) {
+    .yes-button:hover .yes-button__blob {
+      transform: translateZ(0) scale(1.4);
+    }
+  }
+
+  
+  .no-button {
+    z-index: 1;
+    position: relative;
+    top: 20px;
+    padding: 10px 16px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #a80000;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: color 0.2s;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  .no-button:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+  .no-button:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s 0.2s;
+    border-radius: 30px;
+  }
+  .no-button:hover {
+    color: #FFFFFF;
+    border-radius: 30px;
+  }
+  .no-button:hover:after {
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+  }
+  .no-button__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #ffffff;
+  }
+  .no-button__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url("#goo");
+  }
+  .no-button__blob {
+    position: absolute;
+    top: 2px;
+    width: 25%;
+    height: 100%;
+    background: #a80000;
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    transition: transform 0.45s;
+  }
+  @supports (filter: url("#goo")) {
+    .no-button__blob {
+      transform: translate3d(0, 150%, 0) scale(1.4);
+    }
+  }
+  .no-button__blob:nth-child(1) {
+    left: 0%;
+    transition-delay: 0s;
+  }
+  .no-button__blob:nth-child(2) {
+    left: 30%;
+    transition-delay: 0.08s;
+  }
+  .no-button__blob:nth-child(3) {
+    left: 60%;
+    transition-delay: 0.16s;
+  }
+  .no-button__blob:nth-child(4) {
+    left: 90%;
+    transition-delay: 0.24s;
+  }
+  .no-button:hover .no-button__blob {
+    transform: translateZ(0) scale(1.7);
+  }
+  @supports (filter: url("#goo")) {
+    .no-button:hover .no-button__blob {
+      transform: translateZ(0) scale(1.4);
+    }
+  }

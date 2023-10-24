@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="recipe-box" visibility: hidden>
+        <span class="close-button">&#10006;</span>
+        <h1 class="recipe-header" id="recipeName">NAME</h1>
+        <div id="ingredientInputs"></div>
+        
+        <div class="degrees-container" visibility: hidden>
+            <br>
+            <label for="degrees">Degrees:</label>
+            <input type="number" id="degrees" min="1" max="10">
+        </div>
+        <div class="patience-label"></div>
+            <br>
+            <label for="patience" class="patience-label">Patience (1-10):</label>
+            <input type="number" id="patience" min="1" max="10"> 
+            <button class="start-button">
+                START
+                <span class="start-button__inner">
+                  <span class="start-button__blobs">
+                    <span class="start-button__blob"></span>
+                    <span class="start-button__blob"></span>
+                    <span class="start-button__blob"></span>
+                    <span class="start-button__blob"></span>
+                  </span>
+                </span>
+            </button>
+        </div>
+        
+    </div>
+    <div class="confirm-box" visibility: hidden>
+        <h2>Are you sure you want to continue?</h2>
+        <button class="confirm-button yes-button">
+          Submit
+          <span class="yes-button__inner">
+            <span class="yes-button__blobs">
+              <span class="yes-button__blob"></span>
+              <span class="yes-button__blob"></span>
+              <span class="yes-button__blob"></span>
+              <span class="yes-button__blob"></span>
+            </span>
+          </span>
+      </button>
+        <button class="confirm-button no-button">
+          Cancel
+          <span class="no-button__inner">
+            <span class="no-button__blobs">
+              <span class="no-button__blob"></span>
+              <span class="no-button__blob"></span>
+              <span class="no-button__blob"></span>
+              <span class="no-button__blob"></span>
+            </span>
+          </span>
+      </button>
+    </div>
+    <audio id="click-audio">
+      <source src="click-sound.mp3" type="audio/mpeg">
+  </audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+</body>
+</html>
